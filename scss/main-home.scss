@@ -1,0 +1,65 @@
+$branco: #fbfbfb;
+$cinza-claro: #d8d8d8;
+$verde: #00a3da;
+$preto-claro: #363636; //imports bootstrap
+//comentados os features que n estão sendo usados
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type"; //pegando algumas margins
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid"; //usado colunas e row
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+//@import "bootstrap/nav";
+//@import "bootstrap/navbar";
+@import "bootstrap/card";
+//@import "bootstrap/breadcrumb";
+//@import "bootstrap/pagination";
+@import "bootstrap/badge";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/alert";
+//@import "bootstrap/progress";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/close";
+//@import "bootstrap/toasts";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popover";
+@import "bootstrap/carousel";
+//@import "bootstrap/spinners";
+@import "bootstrap/utilities"; //usado para alinhamento de textos e etc
+//@import "bootstrap/print";
+
+//imports do projeto
+@import "reset";
+@import "responsivo";
+@import "menu";
+@import "animacoes";
+@import "carousel";
+@import "bloco-1";
+@import "bloco-2";
+@import "bloco-3";
+@import "bloco-4";
+@import "bloco-5";
+@import "footer";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $branco;
+}
+.container {
+  padding-right: 25px;
+  padding-left: 25px;
+  position: relative;
+  max-width: 1320px;
+}

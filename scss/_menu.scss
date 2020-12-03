@@ -1,0 +1,543 @@
+//subnav-branco
+.sub-navbar-desktop {
+  background: $branco;
+}
+.logo {
+  background-image: url(../img/logo2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 260px;
+  height: 38px;
+  display: block;
+}
+//transition itens menu branco
+.itens-sub-nav div span,
+.itens-sub-nav div a,
+.itens-sub-nav a span {
+  transition: color 0.3s;
+  transition: background-image 0.3s;
+}
+
+.sub-navbar-desktop {
+  span {
+    margin: 0 8px;
+    width: 30px;
+  }
+  :hover {
+    color: $verde;
+  }
+  //redes sociais ajustes e hover
+  .youtube {
+    margin-right: 12px;
+    background-image: url(../img/icons/youtube.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 23px;
+    height: 16px;
+    vertical-align: middle;
+    display: inline-block;
+    &:hover {
+      background-image: url(../img/icons/youtube-hover.svg);
+    }
+  }
+  .facebook {
+    margin-right: 12px;
+    background-image: url(../img/icons/facebook.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    &:hover {
+      background-image: url(../img/icons/facebook-hover.svg);
+    }
+  }
+  .instagram {
+    margin-right: 12px;
+    background-image: url(../img/icons/instagram.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    &:hover {
+      background-image: url(../img/icons/instagram-hover.svg);
+    }
+  }
+}
+
+//dropdown
+.dropdown {
+  .btn-dropdown {
+    font-size: 14px;
+    font-weight: 500;
+    &:hover {
+      text-decoration: none;
+      color: $verde;
+    }
+    //bordas ao lado drop linguagem
+    border-left: 1px solid $cinza-claro;
+    border-right: 1px solid $cinza-claro;
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+}
+.dropdown-menu {
+  z-index: 1040;
+}
+
+// encomendas
+.encomendas {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  border-right: 1px solid $cinza-claro;
+  padding-right: 15px;
+  &:hover {
+    .icon-encomendas {
+      background-image: url(../img/icons/carrinho-hover.svg);
+    }
+  }
+
+  .icon-encomendas {
+    background-image: url(../img/icons/carrinho.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+//minha conta
+.minha-conta {
+  font-size: 14px;
+  font-weight: 500;
+  padding-right: 15px;
+  padding-left: 10px;
+  .minha-conta-link {
+    &:hover {
+      .icon-conta {
+        background-image: url(../img/icons/perfil-hover.svg);
+      }
+    }
+  }
+
+  .icon-conta {
+    background-image: url(../img/icons/perfil.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .favoritas {
+    background-image: url(../img/icons/coracao.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+
+    &:hover {
+      background-image: url(../img/icons/coracao-hover.svg);
+    }
+  }
+  .sacola {
+    background-image: url(../img/icons/sacola-p.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    transition: 0.3s;
+    margin-bottom: 2px;
+    position: relative;
+    margin-right: 0px;
+    &:hover {
+      background-image: url(../img/icons/sacola-hover.svg);
+    }
+  }
+}
+//notificações
+.badge {
+  display: none;
+  background: $verde;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: $branco;
+  font-weight: 500;
+  &:hover {
+    color: $branco;
+  }
+}
+.mobile .badge {
+  width: 15px;
+  height: 15px;
+  top: -4px;
+  right: -7px;
+}
+//classe ativo mostra a badge
+.ativo.badge {
+  display: inline-flex;
+}
+
+.mobile .sub-navbar-desktop {
+  display: none;
+}
+
+//menu mobile
+.desktop .sub-navbar-mobile {
+  display: none;
+}
+.mobile .sub-navbar-mobile {
+  padding-left: 15px;
+  padding-right: 10px;
+  display: block;
+  background: $branco;
+  .logo {
+    background-image: url(../img/logo-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 174px;
+    height: 28px;
+    display: block;
+  }
+  //items mobile
+  .sacola {
+    margin: 0 5px;
+  }
+  .icon-conta {
+    width: 20px;
+    height: 20px;
+  }
+  //aumentar zona de toque mobile
+  a {
+    padding: 10px 10px;
+  }
+  .sacola-link {
+    padding: 10px 10px;
+  }
+}
+
+//navbar verde
+.navbar-desktop {
+  margin-top: 54px;
+  background: $verde;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 25px;
+  padding-left: 25px;
+  @include d(m) {
+    padding: 10px 0;
+    z-index: 99999;
+  }
+}
+.mobile .navbar-desktop {
+  margin-top: 44px;
+}
+
+//dropdown categorias
+//classe que segura todos drop
+.navbar-desktop {
+  .navbar-collapse {
+    transition: 0.3s;
+    background: $branco;
+    position: relative;
+    a:hover {
+      color: $verde;
+    }
+  }
+
+  .dropdown-toggle {
+    &:after {
+      display: none;
+    }
+  }
+
+  .navbar-collapse::before {
+    @include d(m) {
+      display: none;
+    }
+    content: "";
+    background-image: url("../img/icons/hamburg-categoria.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+  }
+  .navbar-collapse:hover {
+    .dropdown-toggle {
+      color: $verde;
+    }
+    &:before {
+      background-image: url("../img/icons/hamburg-hover.svg");
+    }
+    &:after {
+      background-image: url("../img/icons/setinha-hover.svg");
+    }
+  }
+  .navbar-collapse {
+    transition: 0.3s;
+    //taamanho do botao categorias é dado pelo padding nos As
+    a {
+      padding: 10px 90px;
+      display: block;
+      font-weight: 500;
+      @include d(m) {
+        padding: 10px;
+        padding-right: 110px;
+        padding-left: 15px;
+      }
+      text-align: start;
+    }
+  }
+
+  //setinha de categorias
+  .navbar-collapse::after {
+    content: "";
+    background-image: url("../img/icons/setinha.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 7px;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  //menu aberto do dropdown
+  .dropdown-menu {
+    width: 100%;
+    animation: descida 0.5s ease both;
+    border: none;
+    margin-top: -4px;
+    font-size: 14px;
+    //as dentro de categorias
+    a {
+      cursor: pointer;
+      padding: 8px 15px;
+      @include d(s) {
+        padding: 7px 15px;
+      }
+    }
+    //botoes dentro das secoes
+    button {
+      color: rgb(79, 79, 79);
+      &:hover {
+        color: $verde !important;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .item-accordion {
+    position: relative;
+    display: inline-block;
+    //setinha dos items
+    &:after {
+      content: "";
+      background-image: url("../img/icons/setinha.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 10px;
+      height: 13px;
+      display: inline-block;
+      right: 20px;
+      top: 17px;
+      position: absolute;
+    }
+  }
+  //items abertos
+  .collapse {
+    background: rgb(245, 245, 245);
+    padding: 5px 0;
+  }
+  .dropdown-menu.show {
+    transition: 0.3s ease !important;
+  }
+}
+
+.navbar-desktop.fixed-top {
+  z-index: 30;
+}
+
+//menu do meio
+
+.menu-items {
+  @include d(m) {
+    display: none;
+  }
+  ul li a {
+    transition: 0.3s;
+    margin-left: 20px;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $branco;
+    &:hover {
+      color: black;
+    }
+  }
+}
+.categorias {
+  font-weight: 500;
+}
+.busca .btn-secondary {
+  border: 1px solid white;
+}
+
+//busca e estilos
+.busca {
+  @include d(m) {
+    display: none;
+  }
+  input {
+    background: transparent;
+  }
+  .form-control {
+    border-radius: 0;
+    border: 1px solid $cinza-claro;
+  }
+  ::placeholder {
+    color: $branco;
+    font-size: 12px;
+    vertical-align: middle;
+  }
+  max-width: 300px;
+  .btn-secondary {
+    background: $branco;
+    color: $black;
+    font-size: 12px;
+    &:before {
+      content: "";
+      display: inline-block;
+      background-image: url(../img/icons/lupa.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 13px;
+      height: 13px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+}
+//hamburguer icon dispara menu mobile
+
+.desktop .menu-mobile {
+  display: none;
+}
+.menu-open .menu-mobile {
+  display: block;
+}
+.menu-closed .menu-mobile {
+  display: none;
+}
+.desktop .hamburguer {
+  display: none;
+}
+.mobile .hamburguer {
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  // hamburguer do menu
+  &:after {
+    content: "";
+    display: inline-block;
+    text-transform: uppercase;
+    background-image: url(../img/icons/hamburguer-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 16px;
+    margin-left: 15px;
+    vertical-align: middle;
+    padding-bottom: 20px;
+  }
+}
+.hamburguer-group {
+  display: none;
+}
+.mobile .hamburguer-group {
+  display: flex;
+}
+/* .hamburguer-group {
+  margin-left: auto;
+  display: flex;
+  margin-right: 25px;
+  align-items: center;
+} */
+.mobile .menu-text {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+
+  @include d(s) {
+    font-size: 14px;
+    margin-right: -5px;
+  }
+  @include d(ss) {
+    font-size: 10px;
+
+    margin-right: -10px;
+  }
+}
+
+@media (max-width: 310px) {
+  .mobile .menu-text {
+    display: none;
+  }
+}
+
+.menu-mobile {
+  position: absolute;
+  top: 0;
+  background: $verde;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 50px;
+  animation: descidaMenu 0.5s ease both;
+
+  li {
+    margin-top: 20px;
+    a {
+      color: $branco;
+      font-weight: 700;
+    }
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+.mobile .sub-navbar-mobile .sacola-link {
+  @include d(ss) {
+    padding: 10px 0px;
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+}

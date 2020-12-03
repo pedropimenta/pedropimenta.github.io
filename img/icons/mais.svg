@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="32px" height="32px" viewbox="0 0 32 32" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group-5" transform="translate(0.2998047 0.2998047)">
+    <g id="Group">
+      <path d="M15.54 31.08C24.1225 31.08 31.08 24.1225 31.08 15.54C31.08 6.9575 24.1225 0 15.54 0C6.9575 0 0 6.9575 0 15.54C0 24.1225 6.9575 31.08 15.54 31.08Z" id="Oval-Copy-6" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+      <path d="M6.72 4.24727L4.26353 4.24727L4.26353 6.72L2.44235 6.72L2.44235 4.24727L0 4.24727L0 2.47273L2.44235 2.47273L2.44235 0L4.26353 0L4.26353 2.47273L6.72 2.47273L6.72 4.24727Z" transform="translate(12.3203125 12.300293)" id="+" fill="#484848" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>

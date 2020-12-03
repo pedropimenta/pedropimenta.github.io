@@ -1,0 +1,29 @@
+footer {
+  background: #464646;
+  padding: 20px 0;
+
+  margin-top: 350px;
+  .row {
+    align-items: center;
+  }
+  p {
+    color: white;
+    font-size: 10px;
+    margin-left: auto;
+  }
+}
+.mobile footer {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    margin-top: 20px;
+    margin-left: initial;
+    text-align: center;
+  }
+}
+
+.envolve-bloco-5 {
+  height: 10%;
+}

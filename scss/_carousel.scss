@@ -1,0 +1,221 @@
+.carousel {
+  margin-top: 105px;
+}
+
+//texto dentro dos items do carousel
+.carousel-caption {
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: start;
+  p {
+    max-width: 450px;
+    font-size: 12px;
+  }
+  //oleo fula
+  h2 {
+    margin: 30px 0;
+  }
+}
+
+.mobile .carousel-caption {
+  display: none;
+}
+
+//controle
+.carousel-control-prev,
+.carousel-control-next {
+  top: initial;
+  bottom: 30px;
+  right: 100px;
+  width: 50px;
+  height: 50px;
+  @include d(m) {
+    display: none;
+  }
+}
+.carousel-control-prev {
+  left: initial;
+  margin-right: 40px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../img/icons/esquerda.svg);
+  width: 11px;
+  height: 20px;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../img/icons/direita.svg);
+  width: 11px;
+  height: 20px;
+}
+
+.carousel-caption {
+  z-index: initial;
+}
+
+.carousel-inner {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    background: $branco;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -25px;
+    border-radius: 27px;
+    @include d(s) {
+      width: 110px;
+      height: 30px;
+      bottom: -15px;
+    }
+  }
+}
+
+//bolinhas carousel
+.carousel-indicators {
+  bottom: -46px;
+  li {
+    background: none;
+    background-image: url(../img/icons/bolinha.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s ease;
+    width: 35px;
+    height: 40px;
+    &:hover {
+      background-image: url(../img/icons/bolinha-ativa.svg);
+    }
+    &.active {
+      background-image: url(../img/icons/bolinha-ativa.svg);
+    }
+  }
+  @include d(s) {
+    li {
+      background: none;
+      background-image: url(../img/icons/bolinha.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.3s ease;
+      width: 27px;
+      height: 30px;
+    }
+  }
+}
+
+//botao
+@mixin sacola-botao {
+  z-index: 5;
+  width: 19px;
+  height: 20px;
+  display: inline-block;
+  background-image: url(../img/icons/sacola.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  background-size: contain;
+  transition: 0.3s;
+}
+
+.circulo-completo {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -12px;
+}
+
+button.comprar {
+  display: flex;
+  align-items: center;
+  //texto compre aqui
+  a {
+    color: $branco;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  //compre aqui
+  color: $verde;
+  font-weight: 500;
+  margin-top: 10px;
+  i {
+    @include sacola-botao;
+  }
+}
+//animalçao do hover
+.comprar {
+  &:hover {
+    a {
+      color: $verde;
+      transform: translateX(10px);
+    }
+    .circulo-branco {
+      transform: scale(1.2);
+    }
+    .circulo-verde {
+      transform: scale(1.1);
+    }
+  }
+}
+.circulo-verde {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: $verde;
+  display: block;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 2px #939393;
+}
+.circulo-branco {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: block;
+  align-self: center;
+  background: $branco;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+//slick geral
+.slick-slider {
+  user-select: text;
+}
+
+/* .mobile .carousel-caption {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0px;
+  right: 0;
+  margin: 0 auto;
+  color: black;
+  max-width: 300px;
+  h5 {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 24px;
+    color: #595959;
+    margin: 15px 0;
+  }
+  button a {
+    color: black;
+  }
+  .circulo-branco {
+    border: 1px solid $verde;
+  }
+} */

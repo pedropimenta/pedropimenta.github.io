@@ -1,0 +1,53 @@
+@keyframes descida {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(-37px);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translateY(37px);
+  }
+}
+@keyframes descidaMenu {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes subidaMenu {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+.js-scroll {
+  opacity: 0;
+  transition: 0.5s;
+}
+.js-scroll.passou {
+  animation: vemnenem 0.3s both ease;
+  overflow: none;
+  will-change: transform;
+}
+
+@keyframes vemnenem {
+  0% {
+    opacity: 20%;
+
+    transform: perspective(3000px) translate3d(3000px, -1000px, 0);
+  }
+  100% {
+    opacity: 1;
+
+    transform: perspective(0px) translate3d(0, 0, 0);
+  }
+}

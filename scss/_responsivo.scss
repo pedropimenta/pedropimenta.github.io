@@ -1,0 +1,51 @@
+//variaveis do grid
+
+$l-device: 1140px; //large
+$m-device: 1000px; //mediums
+$s-device: 540px; //small
+$ss-device: 330px; //small small
+
+//mixin media querie
+@mixin d($size) {
+  @if $size==l {
+    @media screen and (min-width: $m-device) {
+      //acima do medio
+      @content;
+    }
+  } @else if $size==m {
+    @media screen and (max-width: $m-device - 1) {
+      //abaixo do medio
+      @content;
+    }
+  } @else if $size==s {
+    @media screen and (max-width: $s-device - 1) {
+      @content;
+    }
+  } @else if $size==ss {
+    @media screen and (max-width: $ss-device - 1) {
+      @content;
+    }
+  }
+}
+
+/*  O MIXIN DO RESPONSIVO FUNCIONA DA SEGUINTE FORMA:
+Exemplo
+
+p {
+ width:300px;
+
+ @include d(s){ 
+ width:100px;
+ }
+}
+= em telas menrores que s (540px) width:300px em menores width:100px
+
+
+@include d(VARIAVEL DO TAMANHO)
+
+variaveis `
+l:  acima de m
+m: 993px 
+s: 540px;
+ss: 370px;
+*/
